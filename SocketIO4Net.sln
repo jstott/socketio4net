@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{F883DD5D-A735-4E42-93F7-4AE6E950E104}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{4ADA5382-3D98-4591-A597-31C7092B16E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocketIO.Client.Net40", "SocketIO.Client.Net40\SocketIO.Client.Net40.csproj", "{FA782661-27AD-46D6-9F55-DBA3B63A965E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Node-Server", "samples\node.server\Node-Server.csproj", "{24A60A40-631F-4F32-B01A-BF0C4F98F089}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console_Events", "samples\client.events\Console_Events.csproj", "{F2CE5E48-E58C-4B96-A27A-697F4588B593}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA782661-27AD-46D6-9F55-DBA3B63A965E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA782661-27AD-46D6-9F55-DBA3B63A965E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA782661-27AD-46D6-9F55-DBA3B63A965E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{FA782661-27AD-46D6-9F55-DBA3B63A965E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{FA782661-27AD-46D6-9F55-DBA3B63A965E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA782661-27AD-46D6-9F55-DBA3B63A965E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA782661-27AD-46D6-9F55-DBA3B63A965E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{FA782661-27AD-46D6-9F55-DBA3B63A965E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{24A60A40-631F-4F32-B01A-BF0C4F98F089}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24A60A40-631F-4F32-B01A-BF0C4F98F089}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24A60A40-631F-4F32-B01A-BF0C4F98F089}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{24A60A40-631F-4F32-B01A-BF0C4F98F089}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{24A60A40-631F-4F32-B01A-BF0C4F98F089}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24A60A40-631F-4F32-B01A-BF0C4F98F089}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24A60A40-631F-4F32-B01A-BF0C4F98F089}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{24A60A40-631F-4F32-B01A-BF0C4F98F089}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F2CE5E48-E58C-4B96-A27A-697F4588B593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2CE5E48-E58C-4B96-A27A-697F4588B593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2CE5E48-E58C-4B96-A27A-697F4588B593}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F2CE5E48-E58C-4B96-A27A-697F4588B593}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F2CE5E48-E58C-4B96-A27A-697F4588B593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2CE5E48-E58C-4B96-A27A-697F4588B593}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2CE5E48-E58C-4B96-A27A-697F4588B593}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F2CE5E48-E58C-4B96-A27A-697F4588B593}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{24A60A40-631F-4F32-B01A-BF0C4F98F089} = {4ADA5382-3D98-4591-A597-31C7092B16E1}
+		{F2CE5E48-E58C-4B96-A27A-697F4588B593} = {4ADA5382-3D98-4591-A597-31C7092B16E1}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = SuperWebSocket\SuperWebSocket.csproj
+	EndGlobalSection
+EndGlobal

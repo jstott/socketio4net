@@ -1,0 +1,31 @@
+﻿.loader
+{
+    margin: 6px 8px 4px 8px;
+    visibility: hidden;
+}
+
+.loader.active
+{
+    visibility: visible;
+}
+
+.splash
+{
+    text-align: center;
+    margin: 10% 0 0 0;
+    background: center top no-repeat url('images/ios-startup-image-landscape.png');
+}
+
+.glance div
+{
+    background-color: whitesmoke;
+    border: 1px solid #C0C0C0;
+    margin: 8px 8px;
+    padding: 3px;
+}
+.glance h2
+{
+    color: #F36F2A;
+}
+
+

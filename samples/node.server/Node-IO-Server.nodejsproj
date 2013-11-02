@@ -1,0 +1,2766 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>A9995411-9910-4780-86DB-D80BB7A9FEAE</ProjectGuid>
+    <StartupObject>Server.js</StartupObject>
+    <LaunchUrl>http://127.0.0.1:8000/</LaunchUrl>
+    <Name>Node-IO-Server</Name>
+    <RootNamespace>Node-Server</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="package.json">
+      <SubType>Content</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app" />
+    <Folder Include="app\home" />
+    <Folder Include="app\global" />
+    <Folder Include="app\widgets" />
+    <Folder Include="app\widgets\expander" />
+    <Folder Include="css" />
+    <Folder Include="lib" />
+    <Folder Include="lib\durandal" />
+    <Folder Include="lib\durandal\css" />
+    <Folder Include="lib\durandal\img" />
+    <Folder Include="lib\durandal\js" />
+    <Folder Include="lib\durandal\js\plugins" />
+    <Folder Include="lib\durandal\js\transitions" />
+    <Folder Include="lib\highcharts" />
+    <Folder Include="lib\highcharts\adapters" />
+    <Folder Include="lib\highcharts\modules" />
+    <Folder Include="lib\highcharts\themes" />
+    <Folder Include="lib\knockout-mapping" />
+    <Folder Include="lib\knockout-mapping\build" />
+    <Folder Include="lib\knockout-mapping\build\output" />
+    <Folder Include="lib\knockout-mapping\build\tools" />
+    <Folder Include="lib\knockout-mapping\spec" />
+    <Folder Include="lib\knockout-mapping\spec\lib" />
+    <Folder Include="lib\knockout.js" />
+    <Folder Include="lib\morris.js" />
+    <Folder Include="lib\morris.js\examples" />
+    <Folder Include="lib\morris.js\examples\lib" />
+    <Folder Include="lib\morris.js\less" />
+    <Folder Include="lib\morris.js\lib" />
+    <Folder Include="lib\morris.js\spec" />
+    <Folder Include="lib\morris.js\spec\lib" />
+    <Folder Include="lib\morris.js\spec\lib\area" />
+    <Folder Include="lib\morris.js\spec\lib\bar" />
+    <Folder Include="lib\morris.js\spec\lib\donut" />
+    <Folder Include="lib\morris.js\spec\lib\grid" />
+    <Folder Include="lib\morris.js\spec\lib\line" />
+    <Folder Include="lib\morris.js\spec\support" />
+    <Folder Include="lib\morris.js\spec\vendor" />
+    <Folder Include="lib\q" />
+    <Folder Include="lib\q\benchmark" />
+    <Folder Include="lib\q\design" />
+    <Folder Include="lib\q\examples" />
+    <Folder Include="lib\q\examples\async-generators" />
+    <Folder Include="lib\q\spec" />
+    <Folder Include="lib\q\spec\lib" />
+    <Folder Include="lib\q\spec\lib\jasmine-1.2.0" />
+    <Folder Include="lib\raphael" />
+    <Folder Include="lib\raphael\dev" />
+    <Folder Include="lib\requirejs" />
+    <Folder Include="lib\requirejs-text" />
+    <Folder Include="lib\requirejs\dist" />
+    <Folder Include="lib\requirejs\dist\fonts" />
+    <Folder Include="lib\requirejs\dist\fonts\PT-Sans" />
+    <Folder Include="lib\requirejs\docs" />
+    <Folder Include="lib\requirejs\docs\design" />
+    <Folder Include="lib\requirejs\tests" />
+    <Folder Include="lib\requirejs\tests\anon" />
+    <Folder Include="lib\requirejs\tests\anon\sub" />
+    <Folder Include="lib\requirejs\tests\browsertests" />
+    <Folder Include="lib\requirejs\tests\browsertests\appendbeforeload" />
+    <Folder Include="lib\requirejs\tests\browsertests\async" />
+    <Folder Include="lib\requirejs\tests\browsertests\docwritenested" />
+    <Folder Include="lib\requirejs\tests\browsertests\noload" />
+    <Folder Include="lib\requirejs\tests\browsertests\onerror" />
+    <Folder Include="lib\requirejs\tests\browsertests\scriptload" />
+    <Folder Include="lib\requirejs\tests\browsertests\scriptloadinteractive" />
+    <Folder Include="lib\requirejs\tests\browsertests\scriptloadinteractiveattach" />
+    <Folder Include="lib\requirejs\tests\browsertests\vardefine" />
+    <Folder Include="lib\requirejs\tests\circular" />
+    <Folder Include="lib\requirejs\tests\circular\414" />
+    <Folder Include="lib\requirejs\tests\circular\complexPlugin" />
+    <Folder Include="lib\requirejs\tests\circular\transpiler" />
+    <Folder Include="lib\requirejs\tests\cjsSpace" />
+    <Folder Include="lib\requirejs\tests\commonjs" />
+    <Folder Include="lib\requirejs\tests\commonjs\tests" />
+    <Folder Include="lib\requirejs\tests\commonjs\tests\modules" />
+    <Folder Include="lib\requirejs\tests\commonjs\tests\modules\1.0" />
+    <Folder Include="lib\requirejs\tests\commonjs\tests\modules\1.0\absolute" />
+    <Folder Include="lib\requirejs\tests\commonjs\tests\modules\1.0\absolute\submodule" />
+    <Folder Include="lib\requirejs\tests\commonjs\tests\modules\1.0\cyclic" />
+    <Folder Include="lib\requirejs\tests\commonjs\tests\modules\1.0\determinism" />
+    <Folder Include="lib\requirejs\tests\commonjs\tests\modules\1.0\determinism\submodule" />
+    <Folder Include="lib\requirejs\tests\commonjs\tests\modules\1.0\exactExports" />
+    <Folder Include="lib\requirejs\tests\commonjs\tests\modules\1.0\hasOwnProperty" />
+    <Folder Include="lib\requirejs\tests\commonjs\tests\modules\1.0\method" />
+    <Folder Include="lib\requirejs\tests\commonjs\tests\modules\1.0\missing" />
+    <Folder Include="lib\requirejs\tests\commonjs\tests\modules\1.0\monkeys" />
+    <Folder Include="lib\requirejs\tests\commonjs\tests\modules\1.0\nested" />
+    <Folder Include="lib\requirejs\tests\commonjs\tests\modules\1.0\nested\a" />
+    <Folder Include="lib\requirejs\tests\commonjs\tests\modules\1.0\nested\a\b" />
+    <Folder Include="lib\requirejs\tests\commonjs\tests\modules\1.0\nested\a\b\c" />
+    <Folder Include="lib\requirejs\tests\commonjs\tests\modules\1.0\relative" />
+    <Folder Include="lib\requirejs\tests\commonjs\tests\modules\1.0\relative\submodule" />
+    <Folder Include="lib\requirejs\tests\commonjs\tests\modules\1.0\transitive" />
+    <Folder Include="lib\requirejs\tests\dataMain" />
+    <Folder Include="lib\requirejs\tests\dataMain\baseUrl" />
+    <Folder Include="lib\requirejs\tests\dataMain\baseUrl\src" />
+    <Folder Include="lib\requirejs\tests\dataMain\dataMainIndex" />
+    <Folder Include="lib\requirejs\tests\defineDouble" />
+    <Folder Include="lib\requirejs\tests\definedSpecified" />
+    <Folder Include="lib\requirejs\tests\delayedDefine" />
+    <Folder Include="lib\requirejs\tests\doh" />
+    <Folder Include="lib\requirejs\tests\doh\_sounds" />
+    <Folder Include="lib\requirejs\tests\domReady" />
+    <Folder Include="lib\requirejs\tests\error" />
+    <Folder Include="lib\requirejs\tests\error\doubleRequire" />
+    <Folder Include="lib\requirejs\tests\exports" />
+    <Folder Include="lib\requirejs\tests\hasOwnProperty" />
+    <Folder Include="lib\requirejs\tests\i18n" />
+    <Folder Include="lib\requirejs\tests\i18n\nls" />
+    <Folder Include="lib\requirejs\tests\i18n\nls\en-us-surfer" />
+    <Folder Include="lib\requirejs\tests\i18n\nls\fr" />
+    <Folder Include="lib\requirejs\tests\isBrowser" />
+    <Folder Include="lib\requirejs\tests\issue379" />
+    <Folder Include="lib\requirejs\tests\jquery" />
+    <Folder Include="lib\requirejs\tests\jquery\scripts" />
+    <Folder Include="lib\requirejs\tests\jsonp" />
+    <Folder Include="lib\requirejs\tests\layers" />
+    <Folder Include="lib\requirejs\tests\mapConfig" />
+    <Folder Include="lib\requirejs\tests\mapConfig\a1" />
+    <Folder Include="lib\requirejs\tests\mapConfig\a1\sub" />
+    <Folder Include="lib\requirejs\tests\mapConfig\adapter" />
+    <Folder Include="lib\requirejs\tests\mapConfig\another" />
+    <Folder Include="lib\requirejs\tests\mapConfig\another\c" />
+    <Folder Include="lib\requirejs\tests\mapConfig\built" />
+    <Folder Include="lib\requirejs\tests\mapConfig\c" />
+    <Folder Include="lib\requirejs\tests\mapConfig\c1" />
+    <Folder Include="lib\requirejs\tests\mapConfig\c2" />
+    <Folder Include="lib\requirejs\tests\mapConfig\plug" />
+    <Folder Include="lib\requirejs\tests\moduleConfig" />
+    <Folder Include="lib\requirejs\tests\moduleConfig\b" />
+    <Folder Include="lib\requirejs\tests\nestedDefine" />
+    <Folder Include="lib\requirejs\tests\nestedRelativeRequire" />
+    <Folder Include="lib\requirejs\tests\nestedRelativeRequire\sub" />
+    <Folder Include="lib\requirejs\tests\nestedRequire" />
+    <Folder Include="lib\requirejs\tests\nestedRequireConfig" />
+    <Folder Include="lib\requirejs\tests\onResourceLoad" />
+    <Folder Include="lib\requirejs\tests\packages" />
+    <Folder Include="lib\requirejs\tests\packages\bar" />
+    <Folder Include="lib\requirejs\tests\packages\bar\0.4" />
+    <Folder Include="lib\requirejs\tests\packages\bar\0.4\scripts" />
+    <Folder Include="lib\requirejs\tests\packages\baz" />
+    <Folder Include="lib\requirejs\tests\packages\baz\lib" />
+    <Folder Include="lib\requirejs\tests\packages\config" />
+    <Folder Include="lib\requirejs\tests\packages\config\pixie" />
+    <Folder Include="lib\requirejs\tests\packages\dojox" />
+    <Folder Include="lib\requirejs\tests\packages\dojox\window" />
+    <Folder Include="lib\requirejs\tests\packages\foo" />
+    <Folder Include="lib\requirejs\tests\packages\foo\lib" />
+    <Folder Include="lib\requirejs\tests\packages\funky" />
+    <Folder Include="lib\requirejs\tests\packages\funky\lib" />
+    <Folder Include="lib\requirejs\tests\packages\optimizing" />
+    <Folder Include="lib\requirejs\tests\packages\optimizing\packages" />
+    <Folder Include="lib\requirejs\tests\packages\optimizing\packages\engine" />
+    <Folder Include="lib\requirejs\tests\packages\optimizing\packages\fuel" />
+    <Folder Include="lib\requirejs\tests\packages\optimizing\packages\tires" />
+    <Folder Include="lib\requirejs\tests\packages\pkgs" />
+    <Folder Include="lib\requirejs\tests\packages\pkgs\alpha" />
+    <Folder Include="lib\requirejs\tests\packages\pkgs\beta" />
+    <Folder Include="lib\requirejs\tests\packages\pkgs\beta\0.2" />
+    <Folder Include="lib\requirejs\tests\packages\pkgs\beta\0.2\scripts" />
+    <Folder Include="lib\requirejs\tests\packages\pkgs\dojox" />
+    <Folder Include="lib\requirejs\tests\packages\pkgs\dojox\chair" />
+    <Folder Include="lib\requirejs\tests\packages\pkgs\dojox\table" />
+    <Folder Include="lib\requirejs\tests\pathArray" />
+    <Folder Include="lib\requirejs\tests\paths" />
+    <Folder Include="lib\requirejs\tests\paths\first.js" />
+    <Folder Include="lib\requirejs\tests\paths\impl" />
+    <Folder Include="lib\requirejs\tests\paths\relativeNormalize" />
+    <Folder Include="lib\requirejs\tests\paths\relativeNormalize\bar" />
+    <Folder Include="lib\requirejs\tests\plugins" />
+    <Folder Include="lib\requirejs\tests\plugins\delegated" />
+    <Folder Include="lib\requirejs\tests\plugins\fromText" />
+    <Folder Include="lib\requirejs\tests\plugins\fromTextEvalError" />
+    <Folder Include="lib\requirejs\tests\plugins\fromTextNoDefine" />
+    <Folder Include="lib\requirejs\tests\plugins\onerror" />
+    <Folder Include="lib\requirejs\tests\plugins\pluginLast" />
+    <Folder Include="lib\requirejs\tests\plugins\pluginMap" />
+    <Folder Include="lib\requirejs\tests\plugins\pluginMapSameName" />
+    <Folder Include="lib\requirejs\tests\plugins\pluginMapSameName\plugin" />
+    <Folder Include="lib\requirejs\tests\plugins\pluginMap\dynamic" />
+    <Folder Include="lib\requirejs\tests\plugins\pluginShim" />
+    <Folder Include="lib\requirejs\tests\plugins\prime" />
+    <Folder Include="lib\requirejs\tests\plugins\textDepend" />
+    <Folder Include="lib\requirejs\tests\relative" />
+    <Folder Include="lib\requirejs\tests\relative\foo" />
+    <Folder Include="lib\requirejs\tests\relative\foo\bar" />
+    <Folder Include="lib\requirejs\tests\relative\greek" />
+    <Folder Include="lib\requirejs\tests\relative\outsideBaseUrl" />
+    <Folder Include="lib\requirejs\tests\relative\outsideBaseUrl\a" />
+    <Folder Include="lib\requirejs\tests\relative\outsideBaseUrl\b" />
+    <Folder Include="lib\requirejs\tests\remoteUrls" />
+    <Folder Include="lib\requirejs\tests\requireAsync" />
+    <Folder Include="lib\requirejs\tests\requirePluginLoad" />
+    <Folder Include="lib\requirejs\tests\shim" />
+    <Folder Include="lib\requirejs\tests\shim\built" />
+    <Folder Include="lib\requirejs\tests\specialDeps" />
+    <Folder Include="lib\requirejs\tests\text" />
+    <Folder Include="lib\requirejs\tests\text\resources" />
+    <Folder Include="lib\requirejs\tests\toUrl" />
+    <Folder Include="lib\requirejs\tests\toUrl\sub" />
+    <Folder Include="lib\requirejs\tests\toUrl\sub\nested" />
+    <Folder Include="lib\requirejs\tests\trailingComma" />
+    <Folder Include="lib\requirejs\tests\undef" />
+    <Folder Include="lib\requirejs\tests\uniques" />
+    <Folder Include="lib\requirejs\tests\universal" />
+    <Folder Include="lib\requirejs\tests\urlfetch" />
+    <Folder Include="lib\requirejs\tests\version1" />
+    <Folder Include="lib\requirejs\tests\version2" />
+    <Folder Include="node_modules\" />
+    <Folder Include="routes" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\client.io.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="app\config.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="app\datacontext.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="app\home\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="app\home\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="app\main.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="app\shell.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="app\shell.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="app\widgets\expander\view.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="app\widgets\expander\viewmodel.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="app\widgets\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="app\widgets\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="app\widgets\project.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="app\widgets\project.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="app\widgets\Readme.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="config.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\ie10mobile.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="css\samples.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="debug start.bat">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="helloWorld.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\bower.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\css\durandal.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\img\icon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\img\ios-startup-image-landscape.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\img\ios-startup-image-portrait.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\activator.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\app.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\binder.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\composition.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\events.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\plugins\dialog.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\plugins\history.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\plugins\http.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\plugins\observable.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\plugins\router.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\plugins\serializer.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\plugins\widget.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\system.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\transitions\entrance.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\viewEngine.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\js\viewLocator.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\License.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\durandal\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\adapters\mootools-adapter.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\adapters\mootools-adapter.src.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\adapters\prototype-adapter.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\adapters\prototype-adapter.src.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\adapters\standalone-framework.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\adapters\standalone-framework.src.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\highcharts-more.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\highcharts-more.src.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\highcharts.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\highcharts.src.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\modules\annotations.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\modules\annotations.src.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\modules\canvas-tools.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\modules\canvas-tools.src.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\modules\data.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\modules\data.src.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\modules\exporting.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\modules\exporting.src.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\modules\funnel.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\modules\funnel.src.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\modules\heatmap.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\modules\heatmap.src.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\modules\map.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\modules\map.src.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\themes\dark-blue.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\themes\dark-green.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\themes\gray.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\themes\grid.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\highcharts\themes\skies.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\knockout-mapping\build\build-linux">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\knockout-mapping\build\output\knockout.mapping-latest.debug.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\knockout-mapping\build\output\knockout.mapping-latest.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\knockout-mapping\build\tools\curl.exe">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\knockout-mapping\build\tools\searchReplace.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\knockout-mapping\build\version-header.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\knockout-mapping\HISTORY.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\knockout-mapping\knockout.mapping.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\knockout-mapping\Package.nuspec">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\knockout-mapping\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\knockout-mapping\spec\issues.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\knockout-mapping\spec\lib\json2.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\knockout-mapping\spec\lib\qunit-1.10.0.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\knockout-mapping\spec\lib\qunit-1.10.0.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\knockout-mapping\spec\mappingBehaviors.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\knockout-mapping\spec\proxyDependentObservableBehaviors.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\knockout-mapping\spec\runner.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\knockout.js\bower.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\knockout.js\knockout-2.3.0.debug.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\knockout.js\knockout.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\knockout.js\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\component.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\area-as-line.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\area.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\bar-colors.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\bar-no-axes.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\bar.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\days.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\decimal-custom-hover.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\diagonal-xlabels-bar.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\diagonal-xlabels.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\donut-colors.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\donut-formatter.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\donut.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\dst.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\events.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\goals.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\lib\example.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\lib\example.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\lib\prettify.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\lib\prettify.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\months-no-smooth.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\negative.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\no-grid.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\non-continuous.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\non-date.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\quarters.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\stacked_bars.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\timestamps.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\updating.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\weeks.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\years.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\examples\_template.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\grunt.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\less\morris.core.less">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\lib\morris.area.coffee">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\lib\morris.bar.coffee">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\lib\morris.coffee">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\lib\morris.donut.coffee">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\lib\morris.grid.coffee">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\lib\morris.hover.coffee">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\lib\morris.line.coffee">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\morris.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\morris.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\morris.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\spec\lib\area\area_spec.coffee">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\spec\lib\bar\bar_spec.coffee">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\spec\lib\bar\colours.coffee">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\spec\lib\commas_spec.coffee">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\spec\lib\donut\donut_spec.coffee">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\spec\lib\grid\auto_grid_lines_spec.coffee">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\spec\lib\grid\set_data_spec.coffee">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\spec\lib\grid\y_label_format_spec.coffee">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\spec\lib\hover_spec.coffee">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\spec\lib\label_series_spec.coffee">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\spec\lib\line\line_spec.coffee">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\spec\lib\pad_spec.coffee">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\spec\lib\parse_time_spec.coffee">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\spec\specs.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\spec\support\placeholder.coffee">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\spec\vendor\chai-1.3.0.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\spec\vendor\chai-jquery-1.1.0.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\spec\vendor\jquery-1.8.2.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\spec\vendor\mocha-1.6.0.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\spec\vendor\mocha-1.6.0.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\spec\vendor\raphael-2.1.0.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\spec\vendor\sinon-1.5.0.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\morris.js\spec\vendor\sinon-chai-2.1.2.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\benchmark\compare-with-callbacks.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\benchmark\scenarios.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\CHANGES.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\CONTRIBUTING.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\design\q0.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\design\q1.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\design\q2.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\design\q3.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\design\q4.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\design\q5.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\design\q6.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\design\q7.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\design\README.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\examples\all.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\examples\async-generators\0.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\examples\async-generators\1-return.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\examples\async-generators\2-error-propagation.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\examples\async-generators\3-spawn.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\examples\async-generators\4-flow-control.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\examples\async-generators\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\Gruntfile.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\q.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\queue.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\ref_send.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\spec\aplus-adapter.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\spec\lib\jasmine-1.2.0\jasmine-html.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\spec\lib\jasmine-1.2.0\jasmine.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\spec\lib\jasmine-1.2.0\jasmine.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\spec\lib\jasmine-1.2.0\MIT.LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\spec\lib\jasmine-promise.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\spec\q-spec.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\spec\q-spec.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\spec\queue-spec.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\q\VERSIONS.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\raphael\dev\amdDev.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\raphael\dev\require.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\raphael\license.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\raphael\raphael-min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\raphael\raphael.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs-text\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs-text\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs-text\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs-text\text.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\dist\dist-build.sh">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\dist\dist-site.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\dist\file.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\dist\fonts\Inconsolata.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\dist\fonts\PT-Sans\Paratype PT Sans Free Font License.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\dist\fonts\PT-Sans\PT_Sans.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\dist\fonts\PT-Sans\PT_Sans_Bold.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\dist\fonts\PT-Sans\PT_Sans_Bold_Italic.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\dist\fonts\PT-Sans\PT_Sans_Caption.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\dist\fonts\PT-Sans\PT_Sans_Caption_Bold.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\dist\fonts\PT-Sans\PT_Sans_Italic.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\dist\fonts\PT-Sans\PT_Sans_Narrow.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\dist\fonts\PT-Sans\PT_Sans_Narrow_Bold.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\dist\init.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\dist\Markdown-License.text">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\dist\Markdown.pl">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\dist\post.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\dist\pre.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\dist\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\docs\api.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\docs\commonjs.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\docs\contributing.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\docs\design\packages.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\docs\dojo.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\docs\download.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\docs\errors.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\docs\faq-advanced.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\docs\faq-optimization.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\docs\faq.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\docs\history.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\docs\jquery.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\docs\node.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\docs\optimization.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\docs\plugins.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\docs\requirements.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\docs\start.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\docs\why.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\docs\whyamd.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\require.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tasks.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\testBaseUrl.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\afterload.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\afterloadreadystate.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\all-server.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\all.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\allj.sh">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\alln.sh">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\anon\a.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\anon\anon-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\anon\anonSimple.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\anon\blue.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\anon\c.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\anon\green.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\anon\magenta.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\anon\message.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\anon\red.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\anon\sub\b.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\anon\yellow.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\bar">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\baseUrl.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\appendbeforeload\one.dphpd">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\appendbeforeload\test.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\appendbeforeload\two.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\async\async.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\async\one.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\async\two.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\common.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\docwritenested\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\docwritenested\one.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\docwritenested\two.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\functionToString.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\noload\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\noload\server.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\onerror\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\onerror\ok.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\onerror\parseError.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\onerror\scriptError.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractiveattach\eight.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractiveattach\five.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractiveattach\four.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractiveattach\four.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractiveattach\index-php.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractiveattach\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractiveattach\nine.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractiveattach\one.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractiveattach\seven.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractiveattach\six.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractiveattach\six.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractiveattach\three.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractiveattach\two.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractive\eight.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractive\five.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractive\four.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractive\four.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractive\index-php.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractive\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractive\nine.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractive\one.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractive\seven.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractive\six.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractive\six.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractive\three.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptloadinteractive\two.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptload\eight.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptload\five.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptload\four.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptload\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptload\nine.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptload\one.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptload\seven.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptload\six.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptload\three.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\scriptload\two.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\vardefine\define.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\vardefine\four.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\vardefine\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\vardefine\one.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\vardefine\three.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\browsertests\vardefine\two.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\414\414-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\414\414.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\414\A.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\414\B.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\414\C.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\414\MyClass.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\a.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\b.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\c.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\circularPlugin-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\circularPlugin.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\complexPlugin\complexPlugin-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\complexPlugin\complexPlugin.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\complexPlugin\helper.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\complexPlugin\main.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\complexPlugin\slowText.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\complexPlugin\toolbar.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\complexPlugin\toolbar.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\complexPlugin\viewport.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\complexPlugin\viewport.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\plugin.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\transpiler\a.refine">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\transpiler\b.refine">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\transpiler\c.refine">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\transpiler\d.refine">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\transpiler\e.refine">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\transpiler\transpiler-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\circular\transpiler\transpiler.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\cjsSpace\a.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\cjsSpace\b.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\cjsSpace\c.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\cjsSpace\cjsDotRequire-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\cjsSpace\cjsDotRequire.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\cjsSpace\cjsSpace-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\cjsSpace\cjsSpace.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\absolute\b.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\absolute\program.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\absolute\program.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\absolute\submodule\a.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\absolute\test.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\all.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\cyclic\a.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\cyclic\b.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\cyclic\program.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\cyclic\program.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\cyclic\test.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\determinism\program.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\determinism\program.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\determinism\submodule\a.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\determinism\submodule\b.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\determinism\test.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\exactExports\a.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\exactExports\program.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\exactExports\program.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\exactExports\test.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\hasOwnProperty\hasOwnProperty.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\hasOwnProperty\program.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\hasOwnProperty\program.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\hasOwnProperty\test.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\hasOwnProperty\toString.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\method\a.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\method\program.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\method\program.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\method\test.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\missing\program.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\missing\program.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\missing\test.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\monkeys\a.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\monkeys\program.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\monkeys\program.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\monkeys\test.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\nested\a\b\c\d.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\nested\program.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\nested\program.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\nested\test.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\relative\program.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\relative\program.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\relative\submodule\a.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\relative\submodule\b.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\relative\test.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\system.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\test.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\transitive\a.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\transitive\b.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\transitive\c.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\transitive\program.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\transitive\program.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\commonjs\tests\modules\1.0\transitive\test.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\config.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\configRequirejs.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\dataMain\baseUrl\a.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\dataMain\baseUrl\dataMainBaseUrl.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\dataMain\baseUrl\src\main.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\dataMain\dataMain.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\dataMain\dataMain.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\dataMain\dataMainIndex\dataMainIndex.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\dataMain\dataMainIndex\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\defineDouble\defineDouble.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\definedSpecified\a.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\definedSpecified\b.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\definedSpecified\definedSpecified-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\definedSpecified\definedSpecified.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\delayedDefine\delayedDefine-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\delayedDefine\delayedDefine.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\depEmpty.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\depoverlap.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\depoverlap.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\dimple.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\doh\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\doh\README">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\doh\runner.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\doh\runner.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\doh\runner.sh">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\doh\small_logo.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\doh\_browserRunner.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\doh\_nodeRunner.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\doh\_rhinoRunner.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\doh\_sounds\doh.wav">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\doh\_sounds\dohaaa.wav">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\doh\_sounds\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\doh\_sounds\woohoo.wav">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\domReady\domReady-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\domReady\domReady.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\domReady\domReadyExtraConfig-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\domReady\domReadyExtraConfig.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\domReady\one.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\domReady\two.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\dos.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\error\a.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\error\b.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\error\c.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\error\d.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\error\defineError.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\error\defineErrorLocal.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\error\doubleRequire\b.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\error\doubleRequire\c.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\error\doubleRequire\doubleRequire.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\error\errorContinue.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\error\errorContinueLocal.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\error\globalOnError.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\error\plug.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\error\pluginErrorContinue.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\error\pluginErrorContinueLocal.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\error\requireErrback.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\exports\am.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\exports\assign.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\exports\assign2.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\exports\bm.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\exports\cm.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\exports\exports-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\exports\exports.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\exports\funcSet.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\exports\implicitModule.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\exports\moduleAndExports-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\exports\moduleAndExports.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\exports\simpleReturn.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\exports\usethis.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\exports\vanilla.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\foo">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\func.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\funcFour.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\funcOne.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\funcThree.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\funcTwo.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\hasOwnProperty\hasOwnProperty-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\hasOwnProperty\hasOwnProperty.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\hasOwnProperty\hasOwnProperty.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\hasOwnProperty\prototype.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\hasOwnProperty\toString.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\i18n\common.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\i18n\commonA.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\i18n\commonB.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\i18n\i18n.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\i18n\nls\colors.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\i18n\nls\en-us-surfer\colors.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\i18n\nls\fr\colors.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\i18n\testModule.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\index.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\isBrowser\a.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\isBrowser\isBrowser-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\isBrowser\isBrowser.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\issue379\issue379.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\issue379\issue379.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\jquery\jquery.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\jquery\jqueryDynamic.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\jquery\jqueryDynamic2.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\jquery\scripts\app.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\jquery\scripts\dynamicApp.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\jquery\scripts\jquery-1.7.1.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\jquery\scripts\jquery-GPL-LICENSE.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\jquery\scripts\jquery-MIT-LICENSE.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\jquery\scripts\jquery.alpha.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\jquery\scripts\jquery.beta.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\jquery\scripts\jquery.epsilon.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\jquery\scripts\jquery.gamma.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\jsonp\jsonp.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\jsonp\lamp.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\jsonp\twitter.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\layers\build.sh">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\layers\epsilon.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\layers\helloWorld.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\layers\layer1.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\layers\layers.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\map.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\a1.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\a1\sub\one.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\adapter\d.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\another\c.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\another\c\dim.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\another\c\sub.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\another\minor.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\b.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\built\mapConfig-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\built\mapConfigBuilt.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\built\mapConfigPlugin-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\built\mapConfigPluginBuilt.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\built\mapConfigStar-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\built\mapConfigStarAdapter-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\built\mapConfigStarAdapterBuilt.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\built\mapConfigStarBuilt.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\c.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\c1.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\c1\sub.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\c2.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\c2\sub.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\c\sub.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\d.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\e.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\mapConfig-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\mapConfig.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\mapConfigDelayed-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\mapConfigDelayed.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\mapConfigMulti-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\mapConfigMulti.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\mapConfigPlugin-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\mapConfigPlugin.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\mapConfigRelative-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\mapConfigRelative.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\mapConfigSpecificity-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\mapConfigSpecificity.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\mapConfigStar-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\mapConfigStar.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\mapConfigStarAdapter-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\mapConfigStarAdapter.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\plug.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\plug\c1.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\plug\c2.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\mapConfig\plug\main.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\moduleConfig\a.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\moduleConfig\b\c.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\moduleConfig\moduleConfig-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\moduleConfig\moduleConfig.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\moduleConfig\plain.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\multiversion.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\NAMESPACE.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\nestedDefine\four.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\nestedDefine\nestedDefine.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\nestedDefine\nestedDefine2.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\nestedDefine\nestedDefine2.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\nestedDefine\one.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\nestedDefine\two.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\nestedRelativeRequire\main.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\nestedRelativeRequire\nestedRelativeRequire.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\nestedRelativeRequire\sub\a.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\nestedRelativeRequire\sub\b.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\nestedRequireConfig\nestedRequireConfig.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\nestedRequireConfig\nestedRequireConfig.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\nestedRequire\a.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\nestedRequire\base.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\nestedRequire\nestedRequire-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\nestedRequire\nestedRequire.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\one.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\onResourceLoad\a.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\onResourceLoad\b.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\onResourceLoad\nestedRequire-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\onResourceLoad\nestedRequire.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\bar\0.4\scripts\main.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\baz\lib\helper.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\baz\lib\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\config\config.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\config\pixie\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\dojox\door.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\dojox\window\pane.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\dojox\window\window.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\foo\lib\main.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\foo\lib\second.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\funky\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\funky\lib\monkey.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\optimizing\build.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\optimizing\main.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\optimizing\optimizing-built.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\optimizing\optimizing.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\optimizing\packages\engine\main.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\optimizing\packages\engine\pistons.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\optimizing\packages\engine\sparkplugs.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\optimizing\packages\fuel\main.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\optimizing\packages\tires\main.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\packages-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\packages.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\pkgs\alpha\main.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\pkgs\alpha\replace.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\pkgs\beta\0.2\scripts\beta.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\pkgs\beta\0.2\scripts\util.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\pkgs\dojox\chair\legs.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\pkgs\dojox\chair\main.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\pkgs\dojox\table\legs.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\pkgs\dojox\table\table.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\packages\replace.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\pathArray\pathArray.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\pathArray\pathArrayFail.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\pathArray\real.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\paths\first.js\first.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\paths\first.js\second.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\paths\impl\array.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\paths\impl\util.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\paths\paths.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\paths\relativeModuleId-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\paths\relativeModuleId.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\paths\relativeNormalize\bar\baz.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\paths\relativeNormalize\foo2.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\paths\relativeNormalize\relativeNormalize-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\paths\relativeNormalize\relativeNormalize.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\paths\util.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\a.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\b.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\c.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\delegated\a.refine">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\delegated\delegated-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\delegated\delegated.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\delegated\delegated.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\double.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\double.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\earth.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\fromTextEvalError\a.refine">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\fromTextEvalError\b.refine">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\fromTextEvalError\fromTextEvalError-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\fromTextEvalError\fromTextEvalError.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\fromTextNoDefine\a.refine">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\fromTextNoDefine\fromTextNoDefine-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\fromTextNoDefine\fromTextNoDefine.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\fromTextNoDefine\refine.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\fromText\a.refine">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\fromText\b.refine">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\fromText\fromText-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\fromText\fromText.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\fromText\fromTextConfig-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\fromText\fromTextConfig.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\fromText\refine.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\index.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\indexBuilder.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\nameOnly-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\nameOnly.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\nameOnly.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\onerror\onerror-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\onerror\onerror.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\onerror\thrower.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginLast\app.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginLast\bigCollection.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginLast\bigCollection.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginLast\collection.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginLast\collectionHelper.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginLast\common.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginLast\component.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginLast\component.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginLast\main.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginLast\pluginLast.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginLast\specificCollection.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginLast\specificCollection.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginMapSameName\pluginMapSameName-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginMapSameName\pluginMapSameName.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginMapSameName\plugin\plugin.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginMap\dynamic\application.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginMap\dynamic\employee.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginMap\dynamic\main.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginMap\dynamic\person.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginMap\dynamic\plugin.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginMap\dynamic\pluginMapDynamic.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginMap\pluginMap-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginMap\pluginMap.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginShim\a.refine">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginShim\legacy.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginShim\pluginShim-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\pluginShim\pluginShim.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\prime\a.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\prime\b.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\prime\c.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\prime\earth.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\sync-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\sync.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\textDepend\test.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\textDepend\textDepend-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\textDepend\textDepend.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\plugins\textDepend\textDepend.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\queryPath.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\relative\foo\bar.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\relative\foo\bar\message.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\relative\foo\bar\one.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\relative\foo\bar\two.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\relative\foo\three.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\relative\greek\alpha.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\relative\greek\main.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\relative\outsideBaseUrl\2.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\relative\outsideBaseUrl\a\outsideBaseUrl.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\relative\outsideBaseUrl\b\1.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\relative\outsideBaseUrl\b\3.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\relative\relative-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\relative\relative.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\relative\relativeBaseUrl-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\relative\relativeBaseUrl.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\relative\top.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\remoteUrls\jqwrap.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\remoteUrls\remoteUrls-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\remoteUrls\remoteUrls.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\requireAsync\requireAsync-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\requireAsync\requireAsync.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\requirePluginLoad\requirePluginLoad-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\requirePluginLoad\requirePluginLoad.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\shim\a.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\shim\b.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\shim\basic-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\shim\basic.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\shim\built\basic-built.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\shim\built\basic-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\shim\c.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\shim\d.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\shim\e.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\shim\f.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\simple-badbase.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\simple-nohead.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\simple-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\simple.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\simple.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\specialDeps\foo.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\specialDeps\specialDeps-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\specialDeps\specialDeps.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\text\local.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\text\plain.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\text\resources\local.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\text\resources\sample.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\text\separate.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\text\subwidget.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\text\subwidget.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\text\subwidget2.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\text\text.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\text\textBuilt.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\text\textBuilt.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\text\textOnError.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\text\textOnly.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\text\textOnXhr.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\text\widget.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\text\widget.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\toUrl\auxil.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\toUrl\main.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\toUrl\main.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\toUrl\sub\nested\thing.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\toUrl\sub\noext">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\toUrl\sub\util.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\toUrl\sub\util.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\toUrl\toUrl-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\toUrl\toUrl.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\trailingComma\a.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\trailingComma\trailingComma.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\trailingComma\trailingComma.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\tres.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\two.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\undef\globalFoo.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\undef\real.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\undef\undef.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\undef\undefEnforceShim.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\undef\undefLocal.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\undef\undefNoRequire.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\uniques\one.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\uniques\three.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\uniques\two.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\uniques\uniques.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\universal\eye.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\universal\newt.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\universal\spell.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\universal\tail.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\universal\universal-built.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\universal\universal-tests-built-expected.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\universal\universal-tests-built.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\universal\universal-tests.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\universal\universal.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\uno.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\urlArgsToUrl.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\urlfetch\one.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\urlfetch\three.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\urlfetch\two.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\urlfetch\urlfetch.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\version1\alpha.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\version1\beta.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\version1\gamma.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\version1\omega.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\version2\alpha.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\version2\beta.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\version2\epsilon.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\version2\omega.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\workers.html">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\tests\workers.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\requirejs\updatesubs.sh">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="router.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="routes\api.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="server.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="start.bat">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="store.js">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

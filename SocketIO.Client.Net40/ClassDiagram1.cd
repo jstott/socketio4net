@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SocketIOClient.Client" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DBCgQBICACBAAQFABMQgQpAAEggJABCkkIhAJQCwGIA=</HashCode>
+      <FileName>Client.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SocketIOClient.EndPointClient" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAEAAABAAAAAAAAAAAAAAAAAAAYQ=</HashCode>
+      <FileName>Infrastructure\EndPointClient.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SocketIOClient.ErrorEventArgs" Collapsed="true">
+    <Position X="6.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAIAAAAAA=</HashCode>
+      <FileName>EventArgs\ErrorEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocketIOClient.IOHandshake" Collapsed="true">
+    <Position X="2.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAIAAAAACAAAAAAAAAAQACgAAAgAICAAAAABAAQA=</HashCode>
+      <FileName>Infrastructure\IOHandshake.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocketIOClient.MessageEventArgs" Collapsed="true">
+    <Position X="4.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>EventArgs\MessageEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocketIOClient.WebSocketProxy" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAIAQAAAARIAAAIAAAAAEAAgAACgABAABACAAAA=</HashCode>
+      <FileName>Transports\WebSocketProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SocketIOClient.XhrPolling" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.25" Y="5.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAQACAIRAABEAAAAAAECAAAACACAAABACAAAA=</HashCode>
+      <FileName>Transports\XhrPolling.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SocketIOClient.Messages.AckMessage" Collapsed="true">
+    <Position X="1.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAAAAAAAAAAAAAACAAAAAAAAAARAAAEAAAQAAAAASAA=</HashCode>
+      <FileName>Messages\AckMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocketIOClient.Messages.ConnectMessage" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgBAAAgAAAQAAAAAAAA=</HashCode>
+      <FileName>Messages\ConnectMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocketIOClient.Messages.DisconnectMessage" Collapsed="true">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgBAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Messages\DisconnectMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocketIOClient.Messages.ErrorMessage" Collapsed="true">
+    <Position X="8" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAIAABAAAAACAgBAAgAAAAAAAAQAAAA=</HashCode>
+      <FileName>Messages\ErrorMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocketIOClient.Messages.EventMessage" Collapsed="true">
+    <Position X="10.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAABAAAEAAAQAAAAASAA=</HashCode>
+      <FileName>Messages\EventMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocketIOClient.Messages.Heartbeat" Collapsed="true">
+    <Position X="12.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAIAAAAAA=</HashCode>
+      <FileName>Messages\Heartbeat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocketIOClient.Messages.JsonEncodedEventMessage" Collapsed="true">
+    <Position X="2.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAgAAAgAAAAAQAAABAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Messages\Helper\JsonEncodedEventMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocketIOClient.Messages.JSONMessage" Collapsed="true">
+    <Position X="14.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAABAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Messages\JSONMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocketIOClient.Messages.Message" Collapsed="true">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAUEAAAIEIABAAAAgAIAgAAAAwAAAIAAgA=</HashCode>
+      <FileName>Messages\Message.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SocketIOClient.Messages.NoopMessage" Collapsed="true">
+    <Position X="17" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Messages\NoopMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocketIOClient.Messages.TextMessage" Collapsed="true">
+    <Position X="19.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgBAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Messages\TextMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocketIOClient.Eventing.RegistrationManager" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAgACAAACAgAAAAAAAAABAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Messages\RegistrationManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SocketIOClient.Transports.TransportFactory" Collapsed="true">
+    <Position X="4.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Transports\TransportFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebSocket4Net.WebSocket">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="SocketIOClient.IClient" Collapsed="true">
+    <Position X="2.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACBAAQBAAEAAAJAAEAAAAAAAAAAAIACgEIA=</HashCode>
+      <FileName>Interfaces\IClient.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SocketIOClient.IClientTransport" Collapsed="true">
+    <Position X="4.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IClientTransport.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SocketIOClient.IEndPointClient" Collapsed="true">
+    <Position X="6.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAABAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Interfaces\IEndPointClient.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SocketIOClient.Messages.IMessage" Collapsed="true">
+    <Position X="2.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEEAAAAEAAAAAAAgAAAgAAAAwAAAIAAgA=</HashCode>
+      <FileName>Interfaces\IMessage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="SocketIOClient.SocketIOMessageTypes" Collapsed="true">
+    <Position X="2.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEAAAIAQBAAAAAAIAAAgAAAAAAAAAAIAAgAAA=</HashCode>
+      <FileName>Infrastructure\SocketIOMessageTypes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SocketIOClient.TransportType" Collapsed="true">
+    <Position X="4.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\TransportType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

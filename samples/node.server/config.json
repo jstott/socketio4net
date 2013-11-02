@@ -1,0 +1,28 @@
+{
+    "web": {
+        "port": "3000"
+    },
+    "io": {
+        "enable": [
+            "browser client minification",
+            "browser client etag",
+            "browser client gzip"
+        ],
+        "set": [
+            {
+                "key": "log level",
+                "value": "1"
+            },
+            {
+                "key": "transports",
+                "value": [
+                    "websockets",
+                    "xhr-polling"
+                ]
+            }
+        ]
+    },
+    "clientConfiguration": {
+        "baseRemoteApiUrl": "http://localhost:3000/api/"
+    }
+}

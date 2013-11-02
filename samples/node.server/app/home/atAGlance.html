@@ -1,0 +1,14 @@
+﻿<div style="margin-top:60px;">
+    <h4 style="padding: 8px; background-color:whitesmoke;"><i class="icon-gears "></i> At a Glance</h4>
+    <section>
+        <div class="span2" data-bind="glance: { data: datacontext.webStatus.visits, name: 'Page Visits', icon: 'icon-user' }"></div>
+        <div class="span2" data-bind="glance: { data: datacontext.webStatus.errors, name: 'Web errors', icon: 'icon-bug' }"></div>
+        <div class="span3" data-bind="glance: { data: datacontext.ioStatus.connections, name: 'Websocket / xhr-other', icon: 'icon-exchange' }">
+            <h2 data-part="value" class="span6 offset3 header">
+                <span data-bind="text: data.websocket"></span>/ <span data-bind="    text: data.other"></span>
+            </h2>
+        </div>
+        <div class="span2" data-bind="glance: { data: datacontext.ioStatus.errors, name: 'io errors', icon: 'icon-bug' }"></div>
+    </section>
+</div>
+

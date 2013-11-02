@@ -1,0 +1,19 @@
+﻿<section class="well well-small">
+    <h4>
+        <icon id="collapseEdit" class="icon-double-angle-up pull-right" data-toggle="collapse" data-target="#sendMessage"></icon>
+        <!--<button class="button pull-right " data-toggle="collapse" data-target="#sendMessage">
+                        <icon id="collapseEdit" class="icon-arrow-up"></icon>
+                    </button>-->
+        <span>Broadcast Message to Clients</span>
+    </h4>
+    <div id="sendMessage" class="collapse in">
+        <form class="form-inline">
+            <input data-bind="value: message.room" type="text" class="input-medium" placeholder="Room">
+            <input data-bind="value: message.event" type="text" class="input-medium" placeholder="Event">
+            <input data-bind="value: message.data" type="text" class="input-xlarge" placeholder="Message">
+            <button class="btn btn-primary" data-bind="click: message.send">Send
+                <icon class="icon-play-circle"></icon>
+            </button>
+        </form>
+    </div>
+</section>

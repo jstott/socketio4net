@@ -1,0 +1,17 @@
+{
+  "name": "SocketIO4Net-Test-Server",
+  "author": "J. Stott",
+  "version": "0.0.3",
+  "description": "Simple server to demonstrate SocketIO4Net.Client connectivity",
+  "homepage": "http://socketio4net.codeplex.com/",
+  "main": "server.js",
+  "dependencies": {
+    "socket.io": "*",
+    "express": "*",
+    "debug": "~0.7.2"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.4"
+  }
+}
