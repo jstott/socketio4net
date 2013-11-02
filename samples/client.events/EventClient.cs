@@ -73,14 +73,14 @@ namespace ConsoleEvents
 
 			// random examples of different styles of sending / recv payloads - will add to...
 			socket.Send(new TextMessage("Hello from C# !")); // send plain string message
+            socket.Emit("hello", new { msg = "My name is SocketIO4Net.Client!" }); // event w/string payload
+			//socket.Emit("heartbeat"); // event w/o data payload (nothing to do with socket.io heartbeat)
 			
-			socket.Emit("heartbeat"); // event w/o data payload (nothing to do with socket.io heartbeat)
-			socket.Emit("hello", new {msg = "My name is SocketIO4Net.Client!"}); // event w/string payload
-			socket.Emit("hello", "simple string msg");
-			socket.Emit("partInfo", new { PartNumber = "AT80601000741AA", Code = "SLBEJ", Level = 1 }); // event w/json payload
+			//socket.Emit("hello", "simple string msg");
+			//socket.Emit("partInfo", new { PartNumber = "AT80601000741AA", Code = "SLBEJ", Level = 1 }); // event w/json payload
 			
-			Part newPart = new Part() { PartNumber = "K4P2G324EC", Code = "DDR2", Level = 1 };
-			socket.Emit("partInfo", newPart); // event w/json payload
+			//Part newPart = new Part() { PartNumber = "K4P2G324EC", Code = "DDR2", Level = 1 };
+			//socket.Emit("partInfo", newPart); // event w/json payload
 
 
 			// callback using namespace example 

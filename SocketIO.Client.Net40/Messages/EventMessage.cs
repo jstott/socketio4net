@@ -44,7 +44,8 @@ namespace SocketIOClient.Messages
 				this.AckId = EventMessage.NextAckID;
             
 			//this.JsonEncodedMessage = new JsonEncodedEventMessage(eventName, jsonObject);
-			this.MessageText = this.Json.ToJsonString();
+			//this.MessageText = this.Json.ToJsonString();
+		    this.MessageText = new JsonEncodedEventMessage(eventName, jsonObject).ToJsonString();
         }
 
         public static EventMessage Deserialize(string rawMessage)

@@ -17,7 +17,8 @@
                 "key": "transports",
                 "value": [
                     "websockets",
-                    "xhr-polling"
+                    "xhr-polling",
+					"htmlfile"
                 ]
             }
         ]

@@ -6,14 +6,21 @@
                     </button>-->
         <span>Broadcast Message to Clients</span>
     </h4>
-    <div id="sendMessage" class="collapse in">
+    <div id="sendMessage" class="messageForm collapse in">
         <form class="form-inline">
             <input data-bind="value: message.room" type="text" class="input-medium" placeholder="Room">
             <input data-bind="value: message.event" type="text" class="input-medium" placeholder="Event">
             <input data-bind="value: message.data" type="text" class="input-xlarge" placeholder="Message">
-            <button class="btn btn-primary" data-bind="click: message.send">Send
-                <icon class="icon-play-circle"></icon>
-            </button>
+            <div class="btn-group">
+                <button class="btn btn-primary" data-bind="click: message.send">Send </button>
+                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a data-bind="click: message.sendPing">Ping</a></li>
+                </ul>
+            </div>
+            
         </form>
     </div>
 </section>

@@ -3,19 +3,21 @@
     var self = this;
     this.events = [];
     this.datacontext = datacontext;
-    this.logData = [{ dateTime: new Date(Date.now()), level: 6, zone: 'init', eventCode: 'client', message: '', messageData: '' }];
+    this.logData = [{ dateTime: new Date(Date.now()), zone: 'init', eventCode: 'client', message: '' }];
     // Date.now(); // returns an integer, e.g., 1355549799408
     // new Date(Date.now()) the 'now' DateTime you expected (don't forget new)
     this.grid;
     this.updateGridData = function (event) {
-      event.dateTime = new Date(event.dateTime);
-      if (event.data) {
-        if (typeof event.data === 'object') { //event.data = event.data || '';
-          event.messageData = JSON.stringify(event.data);
-        } else {
-          event.messageData = event.data;
+        event.dateTime = new Date(event.dateTime);
+        if (event.eventCode) {
+            if (typeof event.eventCode === 'object') {
+                event.eventCode = JSON.stringify(event.eventCode);
+            }
         }
-        delete event.data;
+      if (event.message) {
+          if (typeof event.message === 'object') { //event.data = event.data || '';
+              event.message = JSON.stringify(event.message);
+        } 
       }
       self.grid.dataSource.add(event);
     };
@@ -39,16 +41,14 @@
     // setup kendo grid
     $('#gridLogs').kendoGrid({
       dataSource: {
-        data: [{ dateTime: new Date(Date.now()), level: 6, zone: 'init', eventCode: 'client', raw: '', message: '' }],
+        data: [{ dateTime: new Date(Date.now()), zone: 'init', eventCode: 'client', message: '' }],
             schema: {
               model: { //data type of the field {Number|String|Boolean|Date} default is String
                 fields: {
                   dateTime: { type: "date" },
-                  level: { type: "number" },
                   zone: { type: "string" },
                   eventCode: { type: "string" },
-                  message: { type: "string" },
-                  messageData: { type: "string" }
+                  message: { type: "string" }
                 }
               }
             },
@@ -65,19 +65,6 @@
       filterable: true,
       columns: [
         { field: "dateTime", title: "Time", format: "{0: HH:mm:ss fff}", width: 130, filterable: false },
-        {
-          field: "level", title: "Level", width: 110,
-          filterable: {
-            extra: false,
-            operators: {
-              number: {
-                ge: "Is greater than",
-                le: "Is less than",
-                neq: "Is not equal to"
-              }
-            }
-          }
-        },
         {
           field: "zone", title: "Zone", width: 110,
           filterable: {
@@ -104,8 +91,7 @@
             }
           }
         },
-        { field: "message", title: "Message" },
-        { field: "messageData", title: "Data" }
+        { field: "message", title: "Message" }
       ]
     });
     self.grid = $("#gridLogs").data("kendoGrid");  // keep ref to widget;

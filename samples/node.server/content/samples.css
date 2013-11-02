@@ -27,5 +27,12 @@
 {
     color: #F36F2A;
 }
+.glance icon {
+    margin: 8px 0 0 5px;
+}
+
+.form-inline  {
+    margin: 0 0 40px !important;
+}
 
 

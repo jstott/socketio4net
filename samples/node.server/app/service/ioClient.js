@@ -7,8 +7,8 @@
         'reconnection limit': 4000,
         'max reconnection attempts': maxReconnect,
         // to debug specific transports, comment out 'try multiple transports', and uncomment 'transports'
-        //'try multiple transports': true,
-        'transports': ['xhr-polling'],
+        'try multiple transports': true,
+        //'transports': ['xhr-polling'],
         'force new connection': true
       },
       Client = function (options) {

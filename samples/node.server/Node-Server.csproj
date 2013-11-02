@@ -55,6 +55,8 @@
     <Content Include="app\widgets\glance\view.html" />
     <Content Include="app\widgets\glance\viewModel.js" />
     <Content Include="Content\durandal.css" />
+    <Content Include="Content\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\images\icon.png" />
     <Content Include="Content\images\ios-startup-image-landscape.png" />
     <Content Include="Content\images\ios-startup-image-portrait.png" />
@@ -119,6 +121,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="config.json" />
+    <None Include="Content\font-awesome\fonts\fontawesome-webfont.eot" />
+    <None Include="Content\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <None Include="Content\font-awesome\fonts\fontawesome-webfont.woff" />
+    <None Include="Content\font-awesome\fonts\FontAwesome.otf" />
     <None Include="Content\kendo\Bootstrap\Thumbs.db" />
     <None Include="Content\kendo\Default\Thumbs.db" />
     <None Include="debugServer.cmd" />

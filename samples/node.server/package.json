@@ -8,7 +8,8 @@
   "dependencies": {
     "socket.io": "*",
     "express": "*",
-    "debug": "~0.7.2"
+    "debug": "~0.7.2",
+    "socket.io-wildcard": "~0.1.1"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

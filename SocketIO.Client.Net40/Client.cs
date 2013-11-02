@@ -247,22 +247,26 @@ namespace SocketIOClient
             this.CloseHeartBeatTimer(); // stop the heartbeat time
             this.CloseWebSocketClient();// stop websocket
             this.HandShake.ResetConnection();
-            this.ioTransport.Handshake.ResetConnection();
-            bool connected = await this.ioTransport.Reconnect();
-            
-            Trace.WriteLine(string.Format("\tRetry-Connection successful: {0}", connected));
-            if (connected)
-                this.retryConnectionCount = 0;
-            else
-            {	// we didn't connect - try again until exhausted
-                if (this.retryConnectionCount < this.RetryConnectionAttempts)
-                {
-                    this.ReConnect();
-                }
+            if (ioTransport != null)
+            {
+                this.ioTransport.Handshake.ResetConnection();
+                bool connected = await this.ioTransport.Reconnect();
+
+                Trace.WriteLine(string.Format("\tRetry-Connection successful: {0}", connected));
+                if (connected)
+                    this.retryConnectionCount = 0;
                 else
                 {
-                    this.Close();
-                    this.OnSocketConnectionClosedEvent(this, EventArgs.Empty);
+                    // we didn't connect - try again until exhausted
+                    if (this.retryConnectionCount < this.RetryConnectionAttempts)
+                    {
+                        this.ReConnect();
+                    }
+                    else
+                    {
+                        this.Close();
+                        this.OnSocketConnectionClosedEvent(this, EventArgs.Empty);
+                    }
                 }
             }
         }
