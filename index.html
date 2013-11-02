@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Socketio4net by jstott</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Socketio4net</h1>
+        <h2>SocketIO4Net provides a .NET v4.0 &amp; v4.5 (C#) client for Socket.IO. </h2>
+        <a href="https://github.com/jstott/socketio4net" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="socketio4net" class="anchor" href="#socketio4net"><span class="octicon octicon-link"></span></a>socketio4net</h1>
+
+<p>SocketIO4Net.Client provides a .NET 4.0 &amp; v4.5 (C#) client for Socket.IO.  It provides an overall interface similar to a client JavaScript experience, leveraging the WebSocket4Net project for an underlying websocket implementation.</p>
+
+<p>My goal for this project is a simple &amp; familiar experience for .net clients.  You know you want your .Net app to join in some of the fun, right?  Besides, all the cool kids are using Nodejs and Socket.IO these days anyway, give it a whirl.</p>
+
+<h2>
+<a name="development-branch" class="anchor" href="#development-branch"><span class="octicon octicon-link"></span></a>Development Branch</h2>
+
+<p>The Development branch contains wip code that incorporates xhr-polling in addition to websocket support.  A new webserver &amp; client dashboard has also been added into the samples in samples/node.sever.</p>
+
+<p>From VS2012/VS2013, compile and start the the Samples/Console_Events project after you have started the samples/node.server.</p>
+
+<p><em>In order to run the samples/node.server dashboard - you will need to run <code>npm install</code> in that directory initially.</em></p>
+
+<ul>
+<li>
+<code>install.cmd</code> will run npm install for you</li>
+<li>
+<code>startServer.cmd</code> will then run the nodejs server, and launch a chrome browser window to http://localhost:3000</li>
+<li><p><code>debugServer.cmd</code> will run node-inspector and launch chrome browser and allow you to run a debug session against the server</p></li>
+<li><p>At this time, Nuget packages have not yet been updated</p></li>
+</ul><p>This resulting signature is very similar to the socket.io javascript counterpart:</p>
+
+<h2>
+<a name="nodejs--javascript-client" class="anchor" href="#nodejs--javascript-client"><span class="octicon octicon-link"></span></a>node.js / JavaScript client</h2>
+
+<pre><code>socket.on('news', function (data) {
+    console.log(data);
+});
+</code></pre>
+
+<h2>
+<a name="c-net-client" class="anchor" href="#c-net-client"><span class="octicon octicon-link"></span></a>C# .net client</h2>
+
+<pre><code>socket.On("news", (data) =&gt;    {
+    Console.WriteLine(data);
+});
+</code></pre>
+
+<p>The all important - Sample / Demo code snippet </p>
+
+<p>Client socket;
+public void Execute()
+{
+    Console.WriteLine("Starting TestSocketIOClient Example...");</p>
+
+<pre><code>socket = new Client("http://127.0.0.1:3000/"); // url to nodejs 
+socket.Opened += SocketOpened;
+socket.Message += SocketMessage;
+socket.SocketConnectionClosed += SocketConnectionClosed;
+socket.Error += SocketError;
+
+// register for 'connect' event with io server
+socket.On("connect", (fn) =&gt;
+{
+    Console.WriteLine("\r\nConnected event...\r\n");
+    Console.WriteLine("Emit Part object");
+
+    // emit Json Serializable object, anonymous types, or strings
+    Part newPart = new Part() 
+    { PartNumber = "K4P2G324EC", Code = "DDR2", Level = 1 };
+    socket.Emit("partInfo", newPart);
+});
+
+// register for 'update' events - message is a json 'Part' object
+socket.On("update", (data) =&gt;
+{
+    Console.WriteLine("recv [socket].[update] event");
+    //Console.WriteLine("  raw message:      {0}", data.RawMessage);
+    //Console.WriteLine("  string message:   {0}", data.MessageText);
+    //Console.WriteLine("  json data string: {0}", data.Json.ToJsonString());
+    //Console.WriteLine("  json raw:         {0}", data.Json.Args[0]);
+
+    // cast message as Part - use type cast helper
+    Part part = data.Json.GetFirstArgAs&lt;Part&gt;();
+    Console.WriteLine(" Part Level:   {0}\r\n", part.Level);
+});
+
+// make the socket.io connection
+socket.Connect();
+</code></pre>
+
+<p>}</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/jstott/socketio4net/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/jstott/socketio4net/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/jstott/socketio4net"></a> is maintained by <a href="https://github.com/jstott">jstott</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
