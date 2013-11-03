@@ -6,8 +6,8 @@
   "homepage": "http://socketio4net.codeplex.com/",
   "main": "server.js",
   "dependencies": {
-    "socket.io": "*",
-    "express": "*",
+    "socket.io": "~0.9.16",
+    "express": "~3.4.4",
     "debug": "~0.7.2",
     "socket.io-wildcard": "~0.1.1"
   },

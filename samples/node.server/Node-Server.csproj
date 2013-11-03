@@ -128,6 +128,7 @@
     <None Include="Content\kendo\Bootstrap\Thumbs.db" />
     <None Include="Content\kendo\Default\Thumbs.db" />
     <None Include="debugServer.cmd" />
+    <None Include="install.cmd" />
     <None Include="package.json" />
     <None Include="packages.config" />
     <None Include="Scripts\jquery-2.0.3.min.map" />
