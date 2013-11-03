@@ -38,20 +38,38 @@
 <h2>
 <a name="development-branch" class="anchor" href="#development-branch"><span class="octicon octicon-link"></span></a>Development Branch</h2>
 
-<p>The Development branch contains wip code that incorporates xhr-polling in addition to websocket support.  A new webserver &amp; client dashboard has also been added to samples/node.sever:</p>
+<p>The Development branch contains wip code that incorporates xhr-polling in addition to websocket support.  </p>
+
+<h3
+<a name="development-new" class="anchor" href="#development-new"><span class="octicon octicon-link"></span></a>New Additions</h3>
+<p>Xhr-polling support now available.  Based on the transports supported at the socket.io server end, websocket and xhr-polling will be used to connect automatically.  You can also define a specific transport, if desired:</p>
+<ul>
+<li>
+<code>
+	socket.Connect(); // auto-connect via websocket or xhr-polling (as fall back)
+</code>
+</li>
+<li>
+<code>
+	socket.Connect(TransportType.XhrPolling); // force XhrPolling
+</code>
+</li>
+
+</ul>
+<p>A new dashboard for demo &amp; debug has also been added to samples/node.sever:</p>
 <a href="https://github-camo.global.ssl.fastly.net/71dd3e621a771569e361b5f64e483ded85cf80c8/687474703a2f2f6a73746f74742e6769746875622e696f2f736f636b6574696f346e65742f696d616765732f64617368626f6172642d353530783333352e6a7067" target="_blank"><img src="https://github-camo.global.ssl.fastly.net/71dd3e621a771569e361b5f64e483ded85cf80c8/687474703a2f2f6a73746f74742e6769746875622e696f2f736f636b6574696f346e65742f696d616765732f64617368626f6172642d353530783333352e6a7067" alt="dashboard" style="max-width:100%;"></a>
 <p>From VS2012/VS2013, compile and start the the Samples/Console_Events project after you have started the samples/node.server.</p>
 
 <p><em>In order to run the samples/node.server dashboard - you will need to run <code>npm install</code> in that directory.</em></p>
 
 <ul>
-<li><a href="http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages">Enable Nuget package restore</a> in Visual Studio &amp; for the solution.</li>
+<li><a href="http://docs.NuGet.org/docs/workflows/using-NuGet-without-committing-packages">Enable NuGet package restore</a> in Visual Studio &amp; for the solution.</li>
 <li>
 <code>install.cmd</code> will run npm install for you</li>
 <li>
 <code>startServer.cmd</code> will then run the nodejs server, and launch a chrome browser window to http://localhost:3000</li>
 <li><p><code>debugServer.cmd</code> will run node-inspector and launch chrome browser and allow you to run a debug session against the server</p></li>
-<li><p>At this time, Nuget packages have not yet been updated</p></li>
+<li><p>At this time, NuGet packages have not yet been updated</p></li>
 </ul><p>This resulting signature is very similar to the socket.io javascript counterpart:</p>
 
 <h2>
@@ -117,12 +135,12 @@ socket.Connect();
         </section>
 
         <aside id="sidebar">
-          <a href="https://github.com/jstott/socketio4net/zipball/master" class="button">
-            <small>Download</small>
+          <a href="https://github.com/jstott/socketio4net/zipball/develop" class="button">
+            <small>Download 'develop'</small>
             .zip file
           </a>
-          <a href="https://github.com/jstott/socketio4net/tarball/master" class="button">
-            <small>Download</small>
+          <a href="https://github.com/jstott/socketio4net/tarball/develop" class="button">
+            <small>Download 'develop'</small>
             .tar.gz file
           </a>
 
