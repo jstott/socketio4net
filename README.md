@@ -18,7 +18,7 @@ From VS2012/VS2013, compile and start the the Samples/Console_Events project aft
 * In order to run the samples/node.server dashboard - you will need to run `npm install` in that directory initially.
 >* `install.cmd` will run npm install for you  
 
-* `startServer.cmd` will then run the nodejs server, and launch a chrome for http://localhost:3000/
+* `startServer.cmd` will then run the nodejs server, and launch a chrome windwo to http://localhost:3000/
 * `debugServer.cmd` will run node-inspector, launch chrome, and allow you to run a debug session against the server
 
 * _At this time, Nuget packages have not yet been updated_
