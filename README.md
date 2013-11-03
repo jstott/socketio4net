@@ -7,7 +7,7 @@ My goal for this project is a simple & familiar experience for .net clients.  Yo
 
 ## Development Branch
 
-The Development branch contains wip code that incorporates xhr-polling in addition to websocket support.  A new webserver & client dashboard has also been added into the samples in samples/node.sever.  
+The Development branch contains wip code that incorporates xhr-polling in addition to websocket support.  A new webserver & client dashboard has also been added to samples/node.sever.  
 
 ![dashboard](http://jstott.github.io/socketio4net/images/dashboard-550x335.jpg)
 
