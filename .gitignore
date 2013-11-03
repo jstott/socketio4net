@@ -3,6 +3,22 @@
 [Tt]humbs.db
 *.DS_Store
 
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+
+npm-debug.log
+node_modules
+
 #Visual Studio files
 *.[Oo]bj
 *.user
@@ -41,9 +57,6 @@ _ReSharper*
 *.gitignore
 packages/*
 
-#node_modules
-node_modules/
-
 #Project files
 artifacts/*
 msbuild.log
@@ -52,10 +65,12 @@ PublishProfiles/
 UnitTestIntegration/
 SocketIO4Net-Integration*
 
-~$*
 deployzip.cmd
 excludeFiles.txt
 *.csr
 *.crt
 *.pem
 *.key
+samples/node.server/node_modules/socket.io/node_modules/redis/package.json
+samples/node.server/node_modules/socket.io/node_modules/socket.io-client/node_modules/uglify-js/package.json
+samples/node.server/node_modules/socket.io/package.json
