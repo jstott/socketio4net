@@ -38,13 +38,14 @@
 <h2>
 <a name="development-branch" class="anchor" href="#development-branch"><span class="octicon octicon-link"></span></a>Development Branch</h2>
 
-<p>The Development branch contains wip code that incorporates xhr-polling in addition to websocket support.  A new webserver &amp; client dashboard has also been added into the samples in samples/node.sever.</p>
-
+<p>The Development branch contains wip code that incorporates xhr-polling in addition to websocket support.  A new webserver &amp; client dashboard has also been added to samples/node.sever:</p>
+<a href="https://github-camo.global.ssl.fastly.net/71dd3e621a771569e361b5f64e483ded85cf80c8/687474703a2f2f6a73746f74742e6769746875622e696f2f736f636b6574696f346e65742f696d616765732f64617368626f6172642d353530783333352e6a7067" target="_blank"><img src="https://github-camo.global.ssl.fastly.net/71dd3e621a771569e361b5f64e483ded85cf80c8/687474703a2f2f6a73746f74742e6769746875622e696f2f736f636b6574696f346e65742f696d616765732f64617368626f6172642d353530783333352e6a7067" alt="dashboard" style="max-width:100%;"></a>
 <p>From VS2012/VS2013, compile and start the the Samples/Console_Events project after you have started the samples/node.server.</p>
 
-<p><em>In order to run the samples/node.server dashboard - you will need to run <code>npm install</code> in that directory initially.</em></p>
+<p><em>In order to run the samples/node.server dashboard - you will need to run <code>npm install</code> in that directory.</em></p>
 
 <ul>
+<li><a href="http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages">Enable Nuget package restore</a> in Visual Studio &amp; for the solution.</li>
 <li>
 <code>install.cmd</code> will run npm install for you</li>
 <li>
@@ -71,12 +72,12 @@
 
 <p>The all important - Sample / Demo code snippet </p>
 
-<p>Client socket;
+<pre><code>Client socket;
 public void Execute()
 {
-    Console.WriteLine("Starting TestSocketIOClient Example...");</p>
+    Console.WriteLine("Starting TestSocketIOClient Example...");
 
-<pre><code>socket = new Client("http://127.0.0.1:3000/"); // url to nodejs 
+socket = new Client("http://127.0.0.1:3000/"); // url to nodejs 
 socket.Opened += SocketOpened;
 socket.Message += SocketMessage;
 socket.SocketConnectionClosed += SocketConnectionClosed;
@@ -110,9 +111,9 @@ socket.On("update", (data) =&gt;
 
 // make the socket.io connection
 socket.Connect();
+}
 </code></pre>
 
-<p>}</p>
         </section>
 
         <aside id="sidebar">
