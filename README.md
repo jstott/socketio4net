@@ -7,7 +7,18 @@ My goal for this project is a simple & familiar experience for .net clients.  Yo
 
 ## Development Branch
 
-The Development branch contains wip code that incorporates xhr-polling in addition to websocket support.  A new webserver & client dashboard has also been added to samples/node.sever.  
+The Development branch contains WIP code that support for xhr-polling in addition to websocket support.  
+
+### New Additions
+
+#### Xhr-polling 
+Support for Xhr-Polling available. Based on the transports supported at the socket.io server end, websocket and xhr-polling will be used to connect automatically. You can also define a specific transport, if desired:  
+
+`socket.Connect(); // auto-connect via websocket or xhr-polling (as fall back)`  
+`socket.Connect(TransportType.XhrPolling); // force XhrPolling`  
+
+#### Dashboard 
+A new dashboard for demo & debug has also been added to samples/node.sever.  
 
 ![dashboard](http://jstott.github.io/socketio4net/images/dashboard-550x335.jpg)
 
