@@ -1,8 +1,7 @@
 socketio4net
 ============
 
-## Please Note 
-This project is no longer maintained
+## Please Note - This project is no longer maintained
 
 
 
