@@ -4,6 +4,11 @@ socketio4net
 ## Please Note 
 This project is no longer maintained
 
+
+
+
+
+
 SocketIO4Net.Client is a .NET 4.0 &amp; v4.5 (C#) client for Socket.IO.  It provides an overall interface similar to a client JavaScript experience.
 
 My goal for this project is a simple & familiar experience for .net clients.  You know you want your .Net app to join in some of the fun, right?  Besides, all the cool kids are using Nodejs and Socket.IO these days anyway, give it a whirl.
